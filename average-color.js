@@ -51,7 +51,7 @@ function getAverageColor(img) {
   var nPixels = (data.length / 4);
   for (var i = 0, l = data.length; i < l; i += 4) {
     if (data[i+3] == 0){
-      nPixels += 1;
+      nPixels -= 1;
       continue;
     }
     r += data[i];
