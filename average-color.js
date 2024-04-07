@@ -49,6 +49,9 @@ function getAverageColor(img) {
   var b = 0;
 
   for (var i = 0, l = data.length; i < l; i += 4) {
+    if (data[i+3] == 0){
+      continue;
+    }
     r += data[i];
     g += data[i+1];
     b += data[i+2];
